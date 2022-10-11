@@ -21,4 +21,11 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
+        volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: vol-example
+      volumes:
+      - name: vol-example
+        persistentVolumeClaim:
+          claimName: task-pv-claim
 status: {}
