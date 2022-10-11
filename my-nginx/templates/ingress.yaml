@@ -16,3 +16,10 @@ spec:
             name: my-nginx
             port:
               number: 8088
+      - path: /senior
+        pathType: Prefix
+        backend:
+          service:
+            name: my-nginx
+            port:
+              number: 8088
